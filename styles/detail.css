@@ -1,0 +1,258 @@
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        margin:0;
+        width:100%;
+        height: 100%;
+        background-color:  #e0e0e0;
+        font-size: 16px;
+        font-family: 'Ubuntu', sans-serif;
+    } 
+
+    /* HEADER SECTION START HERE  */
+    header{
+        background-color: rosybrown;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-div{
+        display: flex;
+        justify-content: space-between;   
+    }
+        
+    #logo-image{
+        width: 60px;
+        height: 60px;
+    }
+    .logo-image-div{
+        display: inline;
+        margin: 0 0 0 20px;
+        height: 60px;
+        padding: 0px;
+    }
+
+    .link{
+        text-decoration: none;
+        color:black;
+        
+        font-weight: bold;
+    }
+
+    .login-div{
+        text-align: center;
+        margin:0 20px 0 0;
+        float: right; 
+        padding:14px;
+    
+    }
+    /* HEADER ENDS HERE  */
+    .centerInput{
+        text-align: center;
+    }
+    .modal-header {
+        background-color: rosybrown;
+    }
+    /*.centerInput label{
+        padding-right: 10%;
+    }*/ 
+    
+    .centerInput input[type=text], input[type=date],input[type=number],input[type=email], select, textarea {
+        width: 50%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-item{
+        height: 380px;
+    }
+    
+  
+    /* CONTENT DIV STARTS HERE  */
+    .content{
+        margin-top: 60px;
+        margin-bottom: 80px;
+        padding: 20px 0 20px 0;
+    }
+    .enter-details-card{
+        display: flex;
+        flex-direction: row;
+        margin:4% ;
+        border:2px solid black;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .enter-details-card-img{
+        padding: 1%;
+        width: 60%;
+        max-height: 400px;
+    }
+    .detail-hotel-image{
+        width: 700px;
+        height: 400px;
+        
+    }
+    input[type=text], input[type=date],input[type=number], input[type=email],input[type=password], select, textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+        font-weight: bold;
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .enter-details-card-book_now{
+        border-left: 2px solid black;
+        width: 40%;
+       max-height: 400px;
+        padding: 20px;
+        background-color: #cccc;
+    }
+    .col-25 {
+        float: left;
+        width: 30%;
+        margin-top: 6px;
+    }
+    
+    .col-75 {
+        float: left;
+        width: 70%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    .rowp:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  
+
+    .details-room{
+        margin: 2% 4% 4% 4%;
+        padding-bottom: 2%;
+    }
+
+
+    /* FOOTER SECTION STRAT HERE  */
+    footer{
+        background-color: rosybrown;
+        position: fixed;
+        bottom: 0;
+        left: 0;  
+        width: 100%;
+    }
+
+    .footer-content-div{
+        display: inline;
+    
+    }
+
+    .social-logo-image{
+        width: 22px;
+        height: 20px;
+    }
+
+    .social-icon{
+        display: inline;
+    
+    }
+    .copyright{
+        display: inline;
+        font-size: 12px;
+    }
+    .footer-content{
+        overflow: hidden;
+        margin: 12px 20px 12px 20px;
+    }
+
+    /* FOOTER SECTION END HERE  */
+
+/* Responsive layout */
+/* Responsive layout - when the screen is less than 576px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 576px) {
+
+    .carousel-item{
+        max-height:250px;
+    }
+          
+/* CONTENT DIV STARTS HERE  */
+      
+.enter-details-card{
+    flex-direction: column;
+    height: auto;
+   max-height: auto;
+
+}
+.enter-details-card-img {
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+}
+.enter-details-card-book_now {
+    border-top: 2px solid black;
+    border-left: 0;
+    width: 100%;
+  max-height: max-content;
+    padding: 10px;
+}
+.col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+}
+input[type=submit]{
+    width: 100%;
+ margin-top: 20px;   
+}
+.details-room {
+    margin: 4% 4% 4% 4%;
+}
+/* FOOTER SECTION STRAT HERE  */
+.footer-content{
+    margin: 2%;
+}
+.copyright{
+    padding-top:2%;
+    font-size: 8px;
+}
+/* FOOTER SECTION END HERE  */
+}
+
+/* Responsive layout */
+/* Responsive layout - when the screen is greater than 576px wide and less than 768px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 576px) and (max-width: 768px) { 
+    .carousel-item{
+       max-height: 380px;
+    }
+    .enter-details-card-book_now {
+      max-height: max-content;
+    }
+   
+
+   }

@@ -49,6 +49,8 @@ header{
  
 }
 /* HEADER ENDS HERE  */
+
+/* BOOTSTRAP CSS  */
 .centerInput{
     text-align: center;
 }
@@ -66,64 +68,79 @@ input[type=text], input[type=date],input[type=number],input[type=password],input
 .modal-header {
     background-color: rosybrown;
 }
+button.btn.btn-success {
+    height: 35%;
+}
+/* END OF BOOTSTRAP CSS  */
 
 /* CONTENT DIV STARTS HERE  */
 .content{
     margin-top: 70px;
     margin-bottom: 80px;
 }
-.hotel-image{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-#hotel-list-view{
+.card-container{
+    padding-top: 4%;
     display: flex;
-    flex-wrap: wrap;
-}
-.list-view-cards{
-    background-color: lightgray;
-    height: 200px;
-    width: 40%; 
-    margin: 4%;
-    display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.list-view-cards-img{
-    width:40%;
-    height: 100%;
-
+.cards{
+  width:60%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
 }
-.list-view-cards-details{
-    padding: 2%;
-    width:60%;
+.list-view-cards-img{
+    width:30%;
     height:100%;
 }
-#map-view{
-    display: none;
+.list-view-cards-details{
+    padding:4%;
+    background-color: lightgray;
+    width: 70%;
+    height: 100%;
 }
-ul {
-    list-style-type: none;
-    margin:0;
-    padding: 20px;
-    overflow: hidden;
-    text-align: center;  
+.detail-hotel-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+table{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4%;
+}
+th{
+
+    padding-right: 5%;
+}
+td{
+    padding-right: 5%;
 }
 
-li {
-    margin: auto;
-    display: inline;
-    padding: 10px;
+.payment-details{
+    margin: 2%;
 }
-.list-view-cards:hover{
-    background-color: rosybrown;
+.social-logo-image{
+    width: 22px;
+    height: 20px;
+}
+.tariff-detail{
+    background-color: #bc8f8fa6;
+    padding: 2%;
+    margin:2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-evenly;
 }
 
-/* CONTENT DIV END HERE  */
+
+/* CONTENT DIV ENDS HERE  */
 
 /* FOOTER SECTION STRAT HERE  */
+
 footer{
     background-color: rosybrown;
     position: fixed;
@@ -142,7 +159,7 @@ footer{
     height: 20px;
 }
 
-.social-icon{
+.social-icon{ 
     display: inline;
   
 }
@@ -157,44 +174,63 @@ footer{
 
 /* FOOTER SECTION END HERE  */
 
+
 /* Responsive layout */
 /* Responsive layout - when the screen is less than 576px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 576px) {
-       
+    
 /* CONTENT DIV STARTS HERE  */
-.list-view-cards{
-    height: 400px;
-    width: 100%;
-    flex-direction: column;
-    padding: 3%;
+    .cards{
+        width:100%;
+        margin: 0;
+        height:400px;
+        flex-direction: column;
+    }
+    .card-container{
+        padding-top: 0;
+    }
+    .content{
+        margin-top: 60px;
+    }
+    .list-view-cards-img{
+        width:100%;
+        height:60%;
+    }
+    .list-view-cards-details{
+        width: 100%;
+        height: 40%;
+    }
+    .tariff-detail{
+        flex-direction: column;
+        justify-content: center;
+        margin:2% 4%;
+    }
+/* CONTENT DIV ENDS HERE  */
+/* BOOTSTRAP CSS  */
+button.btn.btn-success {
+    height: 100%;
 }
-.list-view-cards-img {
-    width: 100%;
-    height: 70%;
-}
-.list-view-cards-details {
-    padding: 3% 0 0 0;
-    width: 100%;
-    height: 30%;
-}
-
+/* END OF BOOTSTRAP CSS  */
 /* FOOTER SECTION STRAT HERE  */
-.footer-content{
-    margin: 2%;
-}
-.copyright{
-    padding-top:2%;
-    font-size: 8px;
-}
+    .footer-content{
+        margin: 2%;
+    }
+    .copyright{
+        padding-top:2%;
+        font-size: 8px;
+    }
 /* FOOTER SECTION END HERE  */
-}
 
+}
 
 /* Responsive layout */
 /* Responsive layout - when the screen is greater than 576px wide and less than 768px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 576px) and (max-width: 768px) { 
-    .list-view-cards{
-        width: 100%;
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .cards{
+        width: 80%;
     }
-   
-   }
+    button.btn.btn-success {
+        height: 35%;
+    }
+
+}

@@ -17,6 +17,7 @@ header{
     top:0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 .nav-div{
     display: flex;
@@ -37,7 +38,7 @@ header{
 .link{
     text-decoration: none;
     color:black;
-    
+    text-align: center;  
     font-weight: bold;
 }
 
@@ -49,6 +50,8 @@ header{
  
 }
 /* HEADER ENDS HERE  */
+
+/* BOOTSTRAP CODE  */
 .centerInput{
     text-align: center;
 }
@@ -66,62 +69,92 @@ input[type=text], input[type=date],input[type=number],input[type=password],input
 .modal-header {
     background-color: rosybrown;
 }
+/* END OF BOOTSTRAP CODE */
 
-/* CONTENT DIV STARTS HERE  */
+/* CONTENT SECTION STARTS HERE  */
 .content{
-    margin-top: 70px;
+    margin-top: 60px;
     margin-bottom: 80px;
 }
-.hotel-image{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-#hotel-list-view{
-    display: flex;
-    flex-wrap: wrap;
-}
-.list-view-cards{
-    background-color: lightgray;
-    height: 200px;
-    width: 40%; 
-    margin: 4%;
-    display: flex;
+.search-bar{
+    width: 100%;
+    height: 380px;
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.list-view-cards-img{
-    width:40%;
+
+.search-bar input{
+    background-color:  #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    width: 400px;
+    padding:10px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 1px solid #f1f1f1;
+
+}
+.container-image{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px 0 50px 0;
+}
+.city-image{
+    border-radius: 25%;
+    width: 100%;
     height: 100%;
-
+    background-size: cover;
 }
-.list-view-cards-details{
-    padding: 2%;
-    width:60%;
-    height:100%;
-}
-#map-view{
-    display: none;
-}
-ul {
-    list-style-type: none;
-    margin:0;
-    padding: 20px;
-    overflow: hidden;
-    text-align: center;  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
-li {
-    margin: auto;
-    display: inline;
-    padding: 10px;
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black; 
 }
-.list-view-cards:hover{
-    background-color: rosybrown;
+.containerr {
+    box-shadow:  10px 10px 10px grey;
+    border-radius: 25%;
+    position: relative;
+    width:150px;
+    height:150px;
+  }
+ 
+.containerr :hover .overlay {
+    opacity: .5;
 }
+.view-more-div{
+    text-align: center;
+}
+/* CONTENT SECTION  END HERE*/
 
-/* CONTENT DIV END HERE  */
 
 /* FOOTER SECTION STRAT HERE  */
 footer{
@@ -157,25 +190,29 @@ footer{
 
 /* FOOTER SECTION END HERE  */
 
+
 /* Responsive layout */
 /* Responsive layout - when the screen is less than 576px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 576px) {
-       
+    
 /* CONTENT DIV STARTS HERE  */
-.list-view-cards{
-    height: 400px;
-    width: 100%;
+.search-bar{
+    height: 240px;
+    background-attachment:unset;
+}
+.search-bar input{
+    width: 80%;
+}
+.containerr{
+    width: 200px;
+    height: 200px;
+   position: relative;
+    margin: 8% 0;
+  
+}
+.container-image{
     flex-direction: column;
-    padding: 3%;
-}
-.list-view-cards-img {
-    width: 100%;
-    height: 70%;
-}
-.list-view-cards-details {
-    padding: 3% 0 0 0;
-    width: 100%;
-    height: 30%;
+    align-items: center;
 }
 
 /* FOOTER SECTION STRAT HERE  */
@@ -192,9 +229,8 @@ footer{
 
 /* Responsive layout */
 /* Responsive layout - when the screen is greater than 576px wide and less than 768px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (min-width: 576px) and (max-width: 768px) { 
-    .list-view-cards{
-        width: 100%;
-    }
-   
-   }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    
+ /* do nothing  */
+
+}
