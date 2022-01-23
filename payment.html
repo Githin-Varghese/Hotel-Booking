@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/payment.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <title>Payment</title>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <div class="nav-div">
+            <div class="logo-image-div">
+                <img id="logo-image" src="assests/images/logo.png" alt="logo" width="150px">
+            </div>
+            <div class="login-div">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">LOGIN</button>
+            </div>
+        </div>
+    </header>
+    <!-- Modal Box for LogIn popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Please LogIn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body centerInput">
+                    <form action="index.html" method="get">
+                        <br>
+                        <label for="uid">Username:</label>
+                        <input type="text" id="uid" name="uid" placeholder="Enter Username" required><br><br>
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" name="pass" required placeholder="Enter Password"><br><br>
+                        <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">LogIn</button>
+                    </from>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Modal Box for LogIn popup -->
+
+    <!-- Modal Box for contact US popup-->
+    <div class="modal fade" id="exampleModalContactUs" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body centerInput">
+                    <p>Thank you for reaching out!!!</p>
+                    <p>Please enter your email and we will get back to you.</p>
+                    <form action="index.html">
+                        <input type="email" required placeholder="Enter Your Email"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    </from>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Modal Box for contact US popup-->
+
+    <div class="content">
+
+        <div class="card-container">
+            <div class="cards">
+                <div class="list-view-cards-img">
+                    <img class="detail-hotel-image"
+                        src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+                        alt="Radission">
+                </div>
+                <div class="list-view-cards-details">
+                    <h3>Radission Blu Hotel</h3>
+                    <p>#38 of 1,289 hotels in New Delhi</p>
+                    <p>National Highway 8, New Delhi 110017 India</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tariff-detail">
+            <div class="payment-details">
+                <table style="text-align: left;">
+                    <tr>
+                        <th>Name: </th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Number of Adults: </th>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>Check-in Date: </th>
+                        <td>06/06/2020</td>
+                    </tr>
+                    <tr>
+                        <th>Check-out Date: </th>
+                        <td>08/06/2020</td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div class="payment-details">
+                <table>
+                    <tr>
+                        <th>Tariff Breakdown: </th>
+                        <td>Rs.1000 x 2 Adults x 5 Nights</td>
+                    </tr>
+                    <tr>
+                        <th>Total Amount: </th>
+                        <td>Rs. 10000</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="d-grid payment-details">
+                <button type="button" class="btn btn-success">Pay Now</button>
+            </div>
+        </div>
+
+    </div> 
+    <!-- footer section  -->
+    <footer>
+        <div class="nav-div">
+            <div class="footer-content-div footer-content">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalContactUs">ContactUs</button>
+            </div>
+
+            <!-- copyright text  -->
+            <p class="copyright footer-content">&#169; 2020 ROOM SEARCH PVT. LTD.</p>
+
+            <div class="social-icon footer-content">
+                <a href="https://www.facebook.com"><img class="social-logo-image" src="assests/images/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com"><img class="social-logo-image" src="assests/images/instagram.png"
+                        alt="instagram"></a>
+                <a href="https://twitter.com"><img class="social-logo-image" src="assests/images/twitter.png"
+                        alt="twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer section  -->
+
+</body>
+
+</html>
